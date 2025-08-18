@@ -16,6 +16,8 @@ public class Veterinario {
         this.salario = salario;
     }
 
+    public Veterinario(){}
+
     public void setNome(String nome) {
         this.nome = nome;
     }

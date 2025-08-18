@@ -16,6 +16,8 @@ public class Animal {
         this.descricao = descricao;
     }
 
+    public Animal(){}
+
     public void setNome(String nome) {
         this.nome = nome;
     }

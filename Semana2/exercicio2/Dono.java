@@ -13,6 +13,8 @@ public class Dono {
         this.cpf = cpf;
     }
 
+    public Dono(){}
+
     public String getNome(){
         return this.nome;
     }

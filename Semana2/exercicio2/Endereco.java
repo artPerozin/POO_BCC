@@ -24,6 +24,8 @@ public class Endereco {
         this.cep = cep;
     }
 
+    public Endereco(){}
+
     public String getRua() {
         return rua;
     }
