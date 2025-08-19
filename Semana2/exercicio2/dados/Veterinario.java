@@ -1,4 +1,4 @@
-package exercicio2;
+package exercicio2.dados;
 
 public class Veterinario {
     
@@ -6,7 +6,7 @@ public class Veterinario {
     private double salario;
     private Endereco endereco;
     private Animal[] animais;
-    private int quantidadeAnimais;
+    private int quantidadeAnimais = 0;
 
     public Veterinario(
         String nome,
@@ -14,9 +14,8 @@ public class Veterinario {
     ) {
         this.nome = nome;
         this.salario = salario;
+        this.animais = new Animal[50];
     }
-
-    public Veterinario(){}
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -52,10 +51,23 @@ public class Veterinario {
     }
 
     public Animal[] getAnimais() {
-        return animais;
+        return this.animais;        
     }
 
     public int getQuantidadeAnimais() {
         return this.quantidadeAnimais;
+    }
+
+    public String toString() {
+        String veterinario = "";
+
+        veterinario += "Nome: " + this.nome + "\n";
+        veterinario += "Salario: " + this.salario + "\n";
+
+        if(this.endereco != null) {
+            veterinario += "Endereco: " + this.endereco.toString() + "\n";
+        }
+
+        return veterinario;
     }
 }

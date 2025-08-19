@@ -1,4 +1,4 @@
-package exercicio2;
+package exercicio2.dados;
 
 public class Endereco {
     private String rua;
@@ -23,8 +23,6 @@ public class Endereco {
         this.estado = estado;
         this.cep = cep;
     }
-
-    public Endereco(){}
 
     public String getRua() {
         return rua;
@@ -72,5 +70,13 @@ public class Endereco {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public String toString() {
+        String endereco = "";
+        endereco += "Rua: " + this.rua + ", " + this.numero + " - ";
+        endereco += this.bairro + ", " + this.cidade + " - " + this.estado;
+        endereco += " - CEP: " + this.cep;
+        return endereco;
     }
 }

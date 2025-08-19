@@ -1,4 +1,4 @@
-package exercicio2;
+package exercicio2.dados;
 
 public class Animal {
     private String nome;
@@ -15,8 +15,6 @@ public class Animal {
         this.especie = especie;
         this.descricao = descricao;
     }
-
-    public Animal(){}
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -48,5 +46,13 @@ public class Animal {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public String toString() {
+        String animal = "";
+        animal += "Nome: " + this.nome + "\n";
+        animal += "Especie: " + this.especie + "\n";
+        animal += "Descricao: " + this.descricao + "\n";
+        return animal;
     }
 }

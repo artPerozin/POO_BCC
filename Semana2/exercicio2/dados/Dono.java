@@ -1,4 +1,4 @@
-package exercicio2;
+package exercicio2.dados;
 
 public class Dono {
     private String nome;
@@ -12,8 +12,6 @@ public class Dono {
         this.nome = nome;
         this.cpf = cpf;
     }
-
-    public Dono(){}
 
     public String getNome(){
         return this.nome;
