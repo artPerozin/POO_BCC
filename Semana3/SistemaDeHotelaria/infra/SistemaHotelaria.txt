@@ -1,0 +1,27 @@
+cadastrar funcionario
+    String nome,
+    String cpf,
+    String cargo,
+    double salario
+
+cadastrar hospede
+    String nome,
+    String cpf,
+    int numeroQuarto
+
+cadastrar quarto
+    int numero,
+    Funcionario funcionarioResponsavel
+
+cadastrar reserva
+    int numeroReserva,
+    String nomeHospede,
+    int numeroQuarto,
+    String dataEntrada,
+    String dataSaida
+
+listar reservas
+listar quartos disponiveis
+listar hospedes
+listar funcionarios
+
