@@ -1,4 +1,4 @@
-
+package Semana5.Exercicio1;
 
 import java.util.Date;
 
@@ -24,13 +24,11 @@ public class Emprestimo {
     public Date getDataDevolucao() { return dataDevolucao; }
     public void setDataDevolucao(Date dataDevolucao) { this.dataDevolucao = dataDevolucao; }
 
-    @Override
     public String toString() {
         return "Emprestimo [usuario=" + usuario.getNome() + ", livro=" + livro.getTitulo() 
                + ", devolução=" + dataDevolucao + "]";
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (!(obj instanceof Emprestimo)) return false;

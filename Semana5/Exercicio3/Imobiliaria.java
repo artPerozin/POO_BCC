@@ -39,7 +39,6 @@ class Imobiliaria {
         return filtrados;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Imobiliaria: " + nome + "\nImóveis disponíveis:\n");
         for (int i = 0; i < quantidade; i++) {

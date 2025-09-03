@@ -1,4 +1,4 @@
-
+package Semana5.Exercicio1;
 
 public class Livro {
     private String titulo;
@@ -22,12 +22,10 @@ public class Livro {
     public Autor getAutor() { return autor; }
     public void setAutor(Autor autor) { this.autor = autor; }
 
-    @Override
     public String toString() {
         return "Livro [titulo=" + titulo + ", isbn=" + isbn + ", autor=" + autor.getNome() + "]";
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (!(obj instanceof Livro)) return false;
