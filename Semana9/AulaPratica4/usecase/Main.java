@@ -1,4 +1,13 @@
-package Semana9;
+package Semana9.AulaPratica4.usecase;
+
+import Semana9.AulaPratica4.infra.Abundantes;
+import Semana9.AulaPratica4.infra.Fatorial;
+import Semana9.AulaPratica4.infra.Fibonacci;
+import Semana9.AulaPratica4.infra.Gerador;
+import Semana9.AulaPratica4.infra.Naturais;
+import Semana9.AulaPratica4.infra.Perfeitos;
+import Semana9.AulaPratica4.infra.Primos;
+import Semana9.AulaPratica4.infra.Quadrados;
 
 public class Main {
     public static void main(String[] args) {
