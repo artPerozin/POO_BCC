@@ -1,4 +1,4 @@
-package Semana9.AulaPratica4.infra;
+package Semana9.AulaPratica6.infra;
 import java.util.List;
 
 public abstract class Gerador {

@@ -1,18 +1,16 @@
-package Semana9.AulaPratica6.infra;
+package Semana10.infra;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Abundantes extends Gerador {
-    public List<Integer> gerar(int quantidade) {
-        List<Integer> lista = new ArrayList<>();
+    public void gerar(int quantidade) {
+        sequencia = new ArrayList<>();
         int num = 12;
-        while (lista.size() < quantidade) {
+        while (sequencia.size() < quantidade) {
             if (ehAbundante(num)) {
-                lista.add(num);
+                sequencia.add(num);
             }
             num++;
         }
-        return lista;
     }
 
     private boolean ehAbundante(int n) {
