@@ -35,6 +35,14 @@ public class Artista {
 
     @Override
     public String toString() {
-        return "Artista{nome='" + nome + "', musicas=" + musicas.size() + "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("- ").append(nome).append(" | Músicas: ");
+
+        for (Musica m : musicas) {
+            sb.append(m.getTitulo()).append(" ");
+        }
+
+        return sb.toString().trim();
     }
+
 }

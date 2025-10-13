@@ -29,6 +29,14 @@ public class Playlist {
 
     @Override
     public String toString() {
-        return "Playlist{titulo='" + titulo + "', tamanho=" + musicas.size() + "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("- Playlist: ").append(titulo)
+        .append(" | Músicas: ");
+
+        for (Musica m : musicas) {
+            sb.append(m.getTitulo()).append(" ");
+        }
+
+        return sb.toString().trim();
     }
 }

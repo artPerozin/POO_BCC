@@ -43,8 +43,20 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{nome='" + nome + "', email='" + email + 
-               "', favoritas=" + musicasFavoritas.size() + 
-               ", playlists=" + playlists.size() + "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("- Usuário: ").append(nome)
+        .append(" (").append(email).append(")")
+        .append(" | Favoritas: ");
+
+        for (Musica m : musicasFavoritas) {
+            sb.append(m.getTitulo()).append(" ");
+        }
+
+        sb.append("| Playlists: ");
+        for (Playlist p : playlists) {
+            sb.append(p.getTitulo()).append(" ");
+        }
+
+        return sb.toString().trim();
     }
 }

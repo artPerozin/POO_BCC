@@ -43,6 +43,13 @@ public class Musica {
 
     @Override
     public String toString() {
-        return "Musica{titulo='" + titulo + "', duracao=" + duracao + "s, artistas=" + artistas.size() + "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("- ").append(getTitulo()).append(" | Artistas: ");
+
+        for (Artista a : getArtistas()) {
+            sb.append(a.getNome()).append(" ");
+        }
+
+        return sb.toString().trim();
     }
 }
