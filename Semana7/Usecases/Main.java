@@ -1,6 +1,7 @@
 package Semana7.Usecases;
 
 import Semana7.Domain.Zoologico;
+import Semana7.Exceptions.EspacoIndisponivelException;
 import Semana7.Infra.*;
 
 import java.util.Scanner;
@@ -135,11 +136,10 @@ public class Main {
                     Animal animalEscolhido = zoologico.getAnimais().get(idxAnimal);
                     Viveiro viveiroEscolhido = zoologico.getViveiros().get(idxViveiro);
 
-                    boolean sucesso = zoologico.alocarAnimal(animalEscolhido, viveiroEscolhido);
-                    if (sucesso) {
-                        System.out.println("Animal alocado com sucesso!");
-                    } else {
-                        System.out.println("Não foi possível alocar o animal!");
+                    try {
+                        zoologico.alocarAnimal(animalEscolhido, viveiroEscolhido);
+                    } catch (EspacoIndisponivelException e) {
+                        e.printStackTrace();
                     }
                     break;
                 }

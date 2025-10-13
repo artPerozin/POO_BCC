@@ -3,6 +3,7 @@ package Semana7.Domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import Semana7.Exceptions.EspacoIndisponivelException;
 import Semana7.Infra.Animal;
 import Semana7.Infra.Aquario;
 import Semana7.Infra.Viveiro;
@@ -24,11 +25,21 @@ public class Zoologico {
         this.animais.add(animal);
     }
 
-    public boolean alocarAnimal(Animal animal, Viveiro viveiro) {
-        if (viveiros.contains(viveiro)) {
-            return viveiro.adicionarAnimal(animal);
+    public boolean alocarAnimal(Animal animal, Viveiro viveiro) throws EspacoIndisponivelException {
+        if (!viveiros.contains(viveiro)) {
+            return false;
         }
-        return false;
+
+        boolean sucesso = viveiro.adicionarAnimal(animal);
+        
+        if (!sucesso) {
+            throw new EspacoIndisponivelException(
+                "Não há espaço disponível no viveiro '" + viveiro.getNome() + 
+                "' para alocar o animal '" + animal.getNome() + "'."
+            );
+        }
+
+        return true;
     }
 
     public List<Animal> getAnimais() {
